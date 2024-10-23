@@ -191,7 +191,7 @@ def get_txs_page_count(ticker, address, max_txs, start_date=None, end_date=None)
 
 def get_txs_all(ticker, address, max_txs, progress=None, start_date=None, end_date=None):
     api = MintscanAPI(ticker)
-    max_pages = math.ceil(max_txs / TXS_LIMIT_PER_QUERY)
+    max_pages = math.ceil(int(max_txs) / int(TXS_LIMIT_PER_QUERY))
 
     out = []
     search_after = None
@@ -215,7 +215,7 @@ def get_txs_all(ticker, address, max_txs, progress=None, start_date=None, end_da
 
 def get_balances_all(ticker, address, max_txs, start_date=None, end_date=None):
     api = MintscanAPI(ticker)
-    max_pages = math.ceil(max_txs / TXS_LIMIT_PER_QUERY)
+    max_pages = math.ceil(int(max_txs) / int(TXS_LIMIT_PER_QUERY))
 
     out = []
     search_after = None

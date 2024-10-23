@@ -95,6 +95,7 @@ docker run --platform linux/amd64 -it --volume $PWD:/staketaxcsv staketaxcsv bas
   ```
   export PYTHONPATH=$PYTHONPATH:<INSERT_PATH_TO_REPO_HERE>/src`
   ```  
+  export PYTHONPATH=$PYTHONPATH:/workspaces/staketaxcsv/src
 
 # Run CSV job with no transaction limit
 

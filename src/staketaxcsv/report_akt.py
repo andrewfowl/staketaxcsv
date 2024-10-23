@@ -30,7 +30,7 @@ def read_options(options):
 
 def _txdata():
     max_txs = localconfig.limit
-    return TxDataMintscan(TICKER_AKT, max_txs) if MINTSCAN_ON else TxDataLcd(AKT_NODE, max_txs)
+    return TxDataMintscan(TICKER_AKT, int(max_txs)) if MINTSCAN_ON else TxDataLcd(AKT_NODE, int(max_txs))
 
 
 def wallet_exists(wallet_address):
